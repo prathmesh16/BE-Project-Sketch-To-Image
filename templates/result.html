@@ -1,0 +1,15 @@
+<!doctype html>
+<title>Send javascript with template demo</title>
+<style>
+  #data {
+    text-align: center;
+  }
+</style>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<img id="data"/>
+{% for i in data: %}
+<script>
+  $("#sketch").attr("src","{{ i }}")
+  console.log("{{i}}")
+</script>
+{% endfor %}

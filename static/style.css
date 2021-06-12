@@ -1,0 +1,232 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  user-select: none;
+}
+
+body{
+  height: 100vh;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+}
+
+.navbarContainer{
+  background-color:#1c1e29;
+  height: 60px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  color: white;
+}
+
+.navbarContainer > p{
+  font-size:20px;
+}
+
+.mainContainer{
+  display: flex;
+  flex:1;
+  overflow: hidden;
+  align-items:center;
+  padding:30px;
+}
+
+.leftContainer{
+  display: flex;
+  height:100%;
+  width:350px;
+  background:#f7f7f7;
+  border-radius:8px;
+  flex-direction: column;
+  padding-top:15px;
+}
+
+.left-header{
+  width:100%;
+  display: flex;
+  align-items:center;
+  color: #1c1e29;
+  font-size:17px;
+  letter-spacing:0.6px;
+  font-weight: 700;
+  padding-left: 15px;
+  padding-right:15px;
+}
+
+.divider{
+  height:0.8px;
+  background-color: #c1c2c3;
+  margin-top: 8px;
+  margin-right: 50px;
+  margin-left: 15px;
+}
+
+.rightContainer{
+  flex:1;
+  display: flex;
+  height:100%;
+  background:#f7f7f7;
+  border-radius:8px;
+  margin-left: 20px;
+  flex-direction: column;
+}
+
+.wrapper{
+  padding: 30px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  width: 100%;
+  flex:1;
+}
+.sketchSection{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.sketchContainer{
+  border-radius:8px;
+  /* border: 0.5px solid #c1c2c3; */
+  overflow: hidden;
+  justify-content:center;
+  align-items:center;
+  display: flex; 
+  width:250px;
+}
+.sketchImagePlaceholder{
+  height:250px;
+  width:250px;
+  object-fit: cover;
+}
+.uploadBtn{
+  height:50px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+  font-size:18px;
+  background:#1c1e29;
+  margin: 10px;
+  border-radius:6px;
+  letter-spacing:0.6px;
+  font-weight:500;
+  cursor: pointer;
+}
+
+#tryAnotherBtn{
+  display:none;
+}
+
+.selectBtn{
+  height:35px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+  font-size:16px;
+  background:#1c1e29;
+  border-radius:6px;
+  letter-spacing:0.6px;
+  font-weight:500;
+  cursor: pointer;
+  width:250px;
+  margin-top:10px;
+  margin-bottom:10px;
+  /* display: none; */
+}
+
+.uploadBtn:hover,.selectBtn:hover{
+  background-color:rgba(28,30,41,0.9);
+  transition: 0.2s all ease;
+}
+
+#fileName{
+  color: #1c1e29;
+  text-align:center;
+  font-size: 15px;
+  max-width: 250px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  /* display:none; */
+}
+
+.attributeChip{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  padding: 4px 10px;
+  font-size:13px;
+  letter-spacing: 0.4px;
+  color: #1c1e29;
+  border-radius:50px;
+  border: 0.5px solid #1c1e29;
+  margin-bottom: 10px;
+  margin-right:4px;  
+  cursor: pointer;
+  display: inline-block;
+  background-color:white;
+}
+.selectedAttributeChip{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  padding: 4px 10px;
+  font-size:13px;
+  letter-spacing: 0.4px;
+  color:white;
+  background-color:#1c1e29;
+  transition:0.2s all ease;
+  border-radius:50px;
+  border: 0.5px solid #1c1e29;
+  margin-bottom: 10px;
+  margin-right:4px;  
+  cursor: pointer;
+  display: inline-block;
+}
+
+.attributeChip:hover,.selectedAttributeChip:hover{
+  transition:0.2s all ease;
+  box-shadow: 0px 2px 6px 1px rgba(28,30,41,0.29);
+}
+
+
+.att-list{
+  flex: 1;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right:15px;
+}
+
+.imageSection{
+  display: none;
+  justify-content: center;
+  align-items:center;
+}
+.imageContainer{
+  border-radius:8px;
+  /* border: 0.5px solid #c1c2c3; */
+  overflow: hidden;
+  justify-content:center;
+  align-items:center;
+  display: flex; 
+  width:250px;
+  transition: 0.2s all ease;
+}
+.imagePlaceholder{
+  height:250px;
+  width:250px;
+  object-fit: cover;
+}
+
+.arrow{
+  height:70px;
+  width:100px;
+  margin-right: 80px;
+  margin-left:80px;
+  transition: 0.2s all ease;
+  display:none;
+}

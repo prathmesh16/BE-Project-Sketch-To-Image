@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sketch to Image Generation Using GAN</title>
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}"/>
+</head>
+<body>
+  <div class='navbarContainer'>
+    <p>Sketch to Image Generator</p>
+  </div>
+  
+  <div class='mainContainer' >
+    <div class='leftContainer'>
+      <div class='left-header'>
+        <p>Attributes</p>
+      </div>
+      <div class='divider'></div>
+
+      <div class='att-list' id='attributesList' >
+      
+      </div>
+
+      <div class='uploadBtn' id='attributeConfirmBtn'>
+        <p>Confirm Attributes</p>
+      </div>
+    </div>
+    <div class="rightContainer">
+      <div class="wrapper">
+        <div class='skecthSection' >
+        <div class='sketchContainer'> 
+          <img class='sketchImagePlaceholder' src="{{ url_for('static', filename='./placeholder.jpg') }}" id='sketch'  />
+        </div>
+        <div class='selectBtn' id='btnSelect'  >
+          <input type='file' accept="image/*" hidden='hidden'  id='btnSelectHidden' />
+          <p>Select Sketch File</p> 
+        </div>
+        <p id='fileName' >No file choosen</p>
+        </div>
+        <img src="{{ url_for('static', filename='./arrow.png') }}" class='arrow' id='arrowImage' />
+        <div class='imageSection' id='imageSectionId' >
+          <div class='imageContainer'> 
+            <img class='imagePlaceholder' src="{{ url_for('static', filename='./placeholder.jpg') }}" id='finalImage'  />
+          </div>
+        </div>
+      </div>
+      <div class='uploadBtn' id='convertBtn'>
+        <p>Convert Sketch to Image</p>
+      </div>
+      <div class='uploadBtn' id='tryAnotherBtn'>
+        <p>Try another Sketch to Image</p>
+      </div>
+    </div>
+  </div>
+  <script type='text/javascript' src="{{ url_for('static', filename='./attList.js') }}" ></script>
+  <script type='text/javascript' src="{{ url_for('static', filename='./script.js') }}" ></script>
+
+</body>
+</html>
