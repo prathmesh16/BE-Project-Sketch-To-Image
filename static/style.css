@@ -230,3 +230,13 @@ body{
   transition: 0.2s all ease;
   display:none;
 }
+
+
+.loaderClass{
+  height:70px;
+  width:100px;
+  margin-right: 80px;
+  margin-left:80px;
+  transition: 0.2s all ease;
+  display:none;
+}

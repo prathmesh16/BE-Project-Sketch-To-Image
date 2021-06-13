@@ -9,7 +9,7 @@ const finalImage = document.getElementById("finalImage")
 const arrowImage = document.getElementById("arrowImage");
 const imageSection = document.getElementById("imageSectionId");
 const tryAnotherBtn = document.getElementById("tryAnotherBtn");
-
+const loader = document.getElementById('loader');
 
 var attr = [];
 for (let i=0;i<attributes_list.length;i++){
@@ -47,7 +47,7 @@ imageBtn.addEventListener('change',(event)=>{
     sketch.src=src
   }
   else{
-    fileName.innerHTML='No file choosen, yet.'
+    fileName.innerHTML='No sketch choosen, yet.'
     sketch.src = "{{ url_for('static', filename='./placeholder.jpg') }}";
   }
 })
@@ -67,15 +67,18 @@ tryAnotherBtn.addEventListener('click', () => {
   convertBtn.style.display = "flex";
   tryAnotherBtn.style.display = "none";
   arrowImage.style.display = "none";
+  loader.style.display = "none";
   imageSection.style.display = "none";
   fileName.style.display = "flex";
   selectBtn.style.display = "flex";
   confirmAttributesBtn.style.display = "flex";
+  sketch.src = "{{ url_for('static', filename='./placeholder.jpg') }}";
 })
 
 convertBtn.addEventListener('click', () => {
 
-  arrowImage.style.display = "flex";
+  // arrowImage.style.display = "flex";
+  loader.style.display = "flex";
   imageSection.style.display = "flex";
   fileName.style.display = "none";
   selectBtn.style.display = "none";
@@ -98,7 +101,10 @@ convertBtn.addEventListener('click', () => {
     // done  - true if the stream has already given you all its data.
     // value - some data. Always undefined when done is true.
     if (done) {
-      console.log("Stream complete");
+      // console.log("Stream complete");
+      arrowImage.style.display = "flex";
+      loader.style.display = "none";
+      window.alert('Conversion Completed!');
       finalImage.src = image;
       return;
     }

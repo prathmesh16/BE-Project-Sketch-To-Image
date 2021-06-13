@@ -44,6 +44,8 @@
         <p id='fileName' >No file choosen</p>
         </div>
         <img src="{{ url_for('static', filename='./arrow.png') }}" class='arrow' id='arrowImage' />
+        <img src="{{ url_for('static', filename='./loader.gif') }}" class='loaderClass' id='loader' />
+        
         <div class='imageSection' id='imageSectionId' >
           <div class='imageContainer'> 
             <img class='imagePlaceholder' src="{{ url_for('static', filename='./placeholder.jpg') }}" id='finalImage'  />
@@ -54,7 +56,7 @@
         <p>Convert Sketch to Image</p>
       </div>
       <div class='uploadBtn' id='tryAnotherBtn'>
-        <p>Try another Sketch to Image</p>
+        <p>Try again with Different Sketch</p>
       </div>
     </div>
   </div>
